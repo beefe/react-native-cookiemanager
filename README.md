@@ -1,76 +1,27 @@
-# cookie
+react-native cookie manager library.
 
-## Installation and How to use
+- [x] iOS
+- [x] Android
 
-#### Step 1 - NPM Install
+## 安装
 
-```shell
-npm install --save react-native-cookie
-```
-#### Step 2 - Update Gradle Settings
-
-```gradle
-// file: android/settings.gradle
-...
-
-include ':reactcookie', ':app' 
-project(':reactcookie').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-cookie')
- // if there are more library
- // include ':app' , ':libraryone' , ':librarytwo' , 'more...'
- // project(':libraryonename').projectDir = new File(rootProject.projectDir, '../node_modules/libraryonemodule')
- // project(':librarytwoname').projectDir = new File(rootProject.projectDir, '../node_modules/librarytwomodule')
- // more..
+```sh
+$ npm install react-native-cookiemanager --save
 ```
 
-#### Step 3 - Update app Gradle Build
+## 配置
 
-```gradle
-// file: android/app/build.gradle
-...
+### [Android]('./android/README.md')
 
-dependencies {
-    ...
-    compile project(':reactcookie')
-}
-```
+### IOS
+- 打开你的Xcode项目, 在主目录调出快捷菜单点击`New Group`新建一个文件夹(比如`CookieManager`)
+- 进入`node_modules`下的`react-native-cookiemanager`，拷贝`RCTCookieManager.h`和`RCTCookieManager.m`到创建的文件夹里面
 
-#### Step 4 - Register React Package
-
-```java
-...
-import com.heng.cookie.CookieManagerPackage;
-
-public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
-
-    private ReactInstanceManager mReactInstanceManager;
-    private ReactRootView mReactRootView;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        mReactRootView = new ReactRootView(this);
-        mReactInstanceManager = ReactInstanceManager.builder()
-                .setApplication(getApplication())
-                .setBundleAssetName("index.android.bundle")
-                .setJSMainModuleName("index.android")
-                .addPackage(new MainReactPackage())
-                .addPackage(new CookiePackage()) // register cookie package
-                .setUseDeveloperSupport(BuildConfig.DEBUG)
-                .setInitialLifecycleState(LifecycleState.RESUMED)
-                .build();
-        mReactRootView.startReactApplication(mReactInstanceManager, "AwesomeProject", null);
-        setContentView(mReactRootView);
-    }
-...
-
-```
-
-#### Step 5 - Require and use in Javascript
+## 使用
 
 ```js
-// file: index.android.js
 
-var Cookie = require('react-native-cookie');
+import CookieManager from 'react-native-cookiemanager';
 
 var options = {
   name: '',
@@ -81,8 +32,15 @@ var options = {
   expiration: '',
 };
 
-Cookie.set(options,(res) => {
+CookieManager.set(options,(res) => {
   
 });
 
+CookieManager.getAll((res) => {
+  
+});
+
+CookieManager.clearAll((res) => {
+  
+});
 ```
