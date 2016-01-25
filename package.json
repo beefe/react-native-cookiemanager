@@ -1,0 +1,22 @@
+{
+  "name": "react-native-cookiemanager",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shexiaoheng/cookie.git"
+  },
+  "keywords": [
+    "react-native-cookie"
+  ],
+  "author": "shexiaoheng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shexiaoheng/cookie/issues"
+  },
+  "homepage": "https://github.com/shexiaoheng/cookie#readme",
+  "description": "## Installation and How to use"
+}
