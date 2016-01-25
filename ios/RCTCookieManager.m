@@ -11,7 +11,6 @@ RCT_EXPORT_METHOD(set:(NSDictionary *)props callback:(RCTResponseSenderBlock)cal
     NSString *domain = [RCTConvert NSString:props[@"domain"]];
     NSString *origin = [RCTConvert NSString:props[@"origin"]];
     NSString *path = [RCTConvert NSString:props[@"path"]];
-    NSString *version = [RCTConvert NSString:props[@"version"]];
     NSDate *expiration = [RCTConvert NSDate:props[@"expiration"]];
 
     NSMutableDictionary *cookieProperties = [NSMutableDictionary dictionary];
@@ -20,7 +19,6 @@ RCT_EXPORT_METHOD(set:(NSDictionary *)props callback:(RCTResponseSenderBlock)cal
     [cookieProperties setObject:domain forKey:NSHTTPCookieDomain];
     [cookieProperties setObject:origin forKey:NSHTTPCookieOriginURL];
     [cookieProperties setObject:path forKey:NSHTTPCookiePath];
-    [cookieProperties setObject:version forKey:NSHTTPCookieVersion];
     [cookieProperties setObject:expiration forKey:NSHTTPCookieExpires];
 
     NSHTTPCookie *cookie = [NSHTTPCookie cookieWithProperties:cookieProperties];
