@@ -16,9 +16,9 @@ $ npm install react-native-cookiemanager --save
 - 进入`node_modules`下的`react-native-cookiemanager`，拷贝`RCTCookieManager.h`和`RCTCookieManager.m`到创建的文件夹里面
 
 ### Android
-- [Update Gradle Settings](#Update Gradle Settings)
-- [Update App Gradle Build](#Update App Gradle Build)
-- [Register React Package](#Register React Package)
+- [Update Gradle Settings](#update-gradle-settings)
+- [Update App Gradle Build](#update-app-gradle-build)
+- [Register React Package](#register-react-package)
 
 
 ##### Update Gradle Settings
@@ -109,8 +109,8 @@ var options = {
   name: '',
   value: '',
   domain: '',
+  origin: '',
   path: '',
-  version: '',
   expiration: '',
 };
 
