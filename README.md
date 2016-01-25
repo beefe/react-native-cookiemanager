@@ -50,7 +50,7 @@ dependencies {
 
 ##### Register React Package
  
-* after react-native@0.18
+* before react-native@0.18
 ```java
 ...
 import com.heng.cookie.CookieManagerPackage;
@@ -80,7 +80,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 
 ```
 
- * before react-native@0.18
+ * after react-native@0.18
 ```java
 ...
 import com.heng.cookie.CookieManagerPackage;
