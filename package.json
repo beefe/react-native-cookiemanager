@@ -1,22 +1,24 @@
 {
   "name": "react-native-cookiemanager",
   "version": "0.1.0",
+  "description": "react-native cookie manager library.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shexiaoheng/cookie.git"
+    "url": "git+https://github.com/beefe/react-native-cookiemanager.git"
   },
   "keywords": [
-    "react-native-cookie"
+    "react-native-cookie",
+    "react-native-cookies",
+    "react-native-cookiemanager"
   ],
   "author": "shexiaoheng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shexiaoheng/cookie/issues"
+    "url": "https://github.com/beefe/react-native-cookiemanager/issues"
   },
-  "homepage": "https://github.com/shexiaoheng/cookie#readme",
-  "description": "## Installation and How to use"
+  "homepage": "https://github.com/beefe/react-native-cookiemanager#readme"
 }
