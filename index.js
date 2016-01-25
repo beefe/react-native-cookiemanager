@@ -1,3 +1,5 @@
 import { NativeModules } from 'react-native';
 
-export const CookieManager = NativeModules.CookieManager;
+let CookieManager = NativeModules.CookieManager;
+
+export default CookieManager;
