@@ -27,13 +27,9 @@ $ npm install react-native-cookiemanager --save
 // file: android/settings.gradle
 ...
 
-include ':cookiemanager', ':app' 
-project(':cookiemanager').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-cookiemanager/android')
- // if there are more library
- // include ':app' , ':libraryone' , ':librarytwo' , 'more...'
- // project(':libraryonename').projectDir = new File(rootProject.projectDir, '../node_modules/libraryonemodule')
- // project(':librarytwoname').projectDir = new File(rootProject.projectDir, '../node_modules/librarytwomodule')
- // more..
+include ':react-native-cookiemanager'
+project(':react-native-cookiemanager').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-cookiemanager/android')
+
 ```
 
 ##### Update App Gradle Build
@@ -44,13 +40,13 @@ project(':cookiemanager').projectDir = new File(rootProject.projectDir, '../node
 
 dependencies {
     ...
-    compile project(':cookiemanager')
+    compile project(':react-native-cookiemanager')
 }
 ```
 
 ##### Register React Package
  
-* before react-native@0.18
+* before RN v0.18
 ```java
 ...
 import com.heng.cookie.CookieManagerPackage;
@@ -80,7 +76,7 @@ public class MainActivity extends Activity implements DefaultHardwareBackBtnHand
 
 ```
 
- * after react-native@0.18
+ * RN v0.18 - RN v0.29.0
 ```java
 ...
 import com.heng.cookie.CookieManagerPackage;
@@ -98,6 +94,38 @@ public class MainActivity extends ReactActivity {
 
 ```
 
+* after RN v0.29.0
+```java
+...
+import com.heng.cookie.CookieManagerPackage;
+...
+
+public class MainApplication extends Application implements ReactApplication {
+
+
+    private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+        @Override
+        protected boolean getUseDeveloperSupport() {
+            return BuildConfig.DEBUG;
+        }
+
+        @Override
+        protected List<ReactPackage> getPackages() {
+            return Arrays.<ReactPackage>asList(
+                    new MainReactPackage(),
+                    new CookieManagerPackage()
+            );
+        }
+    };
+
+    @Override
+    public ReactNativeHost getReactNativeHost() {
+        return mReactNativeHost;
+    }
+}
+
+```
+
 
 ## 使用
 
@@ -105,7 +133,7 @@ public class MainActivity extends ReactActivity {
 
 import CookieManager from 'react-native-cookiemanager';
 
-var options = {
+let options = {
   name: '',
   value: '',
   domain: '',
@@ -114,15 +142,11 @@ var options = {
   expiration: '',
 };
 
-CookieManager.set(options,(res) => {
-  
+CookieManager.setCookie(options);
+
+CookieManager.getCookie('you url',(res) => {
+  alert(JSON.stringify(res));
 });
 
-CookieManager.getAll((res) => {
-  
-});
-
-CookieManager.clearAll((res) => {
-  
-});
+CookieManager.removeAllCookies();
 ```
