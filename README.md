@@ -1,15 +1,15 @@
-react-native cookie manager library.
+react-native cookie manager library. [![npm version](https://img.shields.io/npm/v/react-native-cookiemanager.svg?style=flat-square)](https://www.npmjs.com/package/react-native-cookiemanager)
 
 - [x] iOS
 - [x] Android
 
-## 安装
+## Installation / 安装
 
 ```sh
 $ npm install react-native-cookiemanager --save
 ```
 
-## 配置
+## Configuration / 配置
 
 ### IOS
 - 打开你的Xcode项目, 在主目录调出快捷菜单点击`New Group`新建一个文件夹(比如`CookieManager`)
@@ -127,7 +127,7 @@ public class MainApplication extends Application implements ReactApplication {
 ```
 
 
-## 使用
+## Use / 使用
 
 ```js
 
