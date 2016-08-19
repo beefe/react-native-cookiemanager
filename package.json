@@ -1,6 +1,6 @@
 {
   "name": "react-native-cookiemanager",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "react-native cookie manager library.",
   "main": "index.js",
   "scripts": {
