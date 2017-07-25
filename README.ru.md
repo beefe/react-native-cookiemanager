@@ -1,7 +1,5 @@
 react-native cookie manager library. [![npm version](https://img.shields.io/npm/v/react-native-cookiemanager.svg?style=flat-square)](https://www.npmjs.com/package/react-native-cookiemanager)
 
-[ru](README.ru.md)
-
 - [x] iOS
 - [x] Android
 
@@ -14,8 +12,8 @@ $ npm install react-native-cookiemanager --save
 ## Configuration / 配置
 
 ### IOS
-- 打开你的Xcode项目, 在主目录调出快捷菜单点击`New Group`新建一个文件夹(比如`CookieManager`)
-- 进入`node_modules`下的`react-native-cookiemanager`，拷贝`RCTCookieManager.h`和`RCTCookieManager.m`到创建的文件夹里面
+- Откройте свой проект Xcode, вызовите контекстное меню, выберите команду `New Group`, чтобы создать новую папку (например, `CookieManager`) в вашем домашнем каталоге
+- Скопируйте файы из `react-native-cookiemanager` RCTCookieManager.h и RCTCookieManager.m 
 
 ### Android
 - [Update Gradle Settings](#update-gradle-settings)
