@@ -20,7 +20,7 @@ public class CookieManagerPackage implements ReactPackage {
         return Arrays.<NativeModule>asList(new CookieManagerModule(reactContext));
     }
 
-    @Override
+    // Deprecated in RN 0.47
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
